@@ -11,7 +11,13 @@ type bin struct {
 	name      string
 }
 
-type binList []bin
+type binList struct {
+	list []bin
+}
+
+func newBinList() *binList {
+	return &binList{}
+}
 
 func newBin(id string, private bool, name string) bin {
 	return bin{
